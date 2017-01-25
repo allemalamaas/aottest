@@ -1,0 +1,27 @@
+<md-sidenav-container>
+  <md-sidenav #sidenav mode="over">
+    <md-toolbar color="primary">
+        <span>The App</span>
+        <span flex></span>
+        <button md-icon-button
+                (click)="sidenav.toggle()">
+          <md-icon>menu</md-icon>
+        </button>
+    </md-toolbar>
+    <md-nav-list>
+        <a md-list-item routerLink="">Home</a>
+        <a md-list-item routerLink="lazy">Lazy</a>
+        <a md-list-item routerLink="lazy/posts">Posts</a>
+    </md-nav-list>
+  </md-sidenav>
+  <div class="my-content">
+    <md-toolbar>
+      <button md-icon-button
+        (click)="sidenav.toggle()">
+        <md-icon>menu</md-icon>
+      </button>
+    </md-toolbar>
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>
+
